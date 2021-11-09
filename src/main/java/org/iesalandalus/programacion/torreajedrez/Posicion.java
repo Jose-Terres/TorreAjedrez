@@ -28,7 +28,7 @@ public class Posicion {
 		//comprobamos que las filas esten entre 1 y 8
 		if (fila<1 || fila > 8) {
 			// si no estan entre esos numeros nos lanza un error THROW NEW IllegalArgumentException 
-			throw new IllegalArgumentException ("ERROR: la fila tiene que ser mayor que 1 y menor que 8");
+			throw new IllegalArgumentException ("ERROR: fila no válida");
 			// en caso de que los valores esten dentro de 1 y 8 el valor de fila sera el de fila
 		}else {
 			this.fila = fila;
@@ -43,7 +43,7 @@ public class Posicion {
 		if (columna < 'a' || columna > 'h') {
 			// si no estan entre esos numeros nos lanza un error THROW NEW
 			// IllegalArgumentException
-			throw new IllegalArgumentException("ERROR: la columna tiene que ser estar entre a y h");
+			throw new IllegalArgumentException("ERROR: columna no válida");
 			// en caso de que los valores esten dentro de a y h el valor de columna sera el
 			// de columna
 		} else {
