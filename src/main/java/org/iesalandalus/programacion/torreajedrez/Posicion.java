@@ -37,7 +37,7 @@ public class Posicion {
 		if (fila < 1 || fila > 8) {
 			// si no estan entre esos numeros nos lanza un error THROW NEW
 			// IllegalArgumentException
-			throw new IllegalArgumentException("ERROR: Fila no válida");
+			throw new IllegalArgumentException("ERROR: Fila no válida.");
 			// en caso de que los valores esten dentro de 1 y 8 el valor de fila sera el de
 			// fila
 		} else {
@@ -54,12 +54,43 @@ public class Posicion {
 		if (columna < 'a' || columna > 'h') {
 			// si no estan entre esos numeros nos lanza un error THROW NEW
 			// IllegalArgumentException
-			throw new IllegalArgumentException("ERROR: Columna no válida");
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
 			// en caso de que los valores esten dentro de a y h el valor de columna sera el
 			// de columna
 		} else {
 			this.columna = columna;
 		}
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + columna;
+		result = prime * result + fila;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		if (columna != other.columna)
+			return false;
+		if (fila != other.fila)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "fila=" + fila + ", columna=" + columna;
+	}
+
+
 
 }
