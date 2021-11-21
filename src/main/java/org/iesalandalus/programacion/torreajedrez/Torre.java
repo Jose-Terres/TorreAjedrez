@@ -197,4 +197,9 @@ public class Torre {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return posicion.toString() + ", color="+ color;
+	}
+
 }
