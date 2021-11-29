@@ -12,7 +12,8 @@ public class MainApp {
 	private static Torre torre;
 	// La variable que controla el fin del programa
 	private static boolean fin = false;
-
+	
+// sting
 	public static void main(String[] args) {
 
 		do {
